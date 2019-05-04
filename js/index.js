@@ -5,7 +5,19 @@
 
 
 
+// Hover over the header to make the header reappear. 
+const navContainer = document.querySelector(".nav-container");
+navContainer.addEventListener("mouseenter", () => header.style.opacity = "1");
 
+// Hover over a expedition title to change its color to MediumSeaGreen.
+const allExpeditionsTitle = document.querySelectorAll('.destination h4')
+    //allExpeditionsTitle.addEventListener('mousemove', (e) => {e.stopPropagation()})
+allExpeditionsTitle.forEach(node => { node.addEventListener('mousemove', (e) => { e.target.style.color = 'MediumSeaGreen' }) });
+
+// Hover over a Adventure Awaits title to change its color to Maroon.
+const adventureAwaits = document.querySelectorAll('.text-content h2')
+    //adventureAwaits.addEventListener('mousemove', (e) => {e.stopPropagation()})
+adventureAwaits.forEach(node => { node.addEventListener('mousemove', (e) => { e.target.style.color = 'Maroon' }) });
 
 
 
