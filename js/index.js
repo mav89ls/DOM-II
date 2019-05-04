@@ -34,6 +34,14 @@ funBusBanner.addEventListener('drag', (e) => e.target.style.transform = 'scale(1
 const nav = document.querySelector(".nav");
 nav.addEventListener("dblclick", (e) => { e.target.style.backgroundColor = 'red'; });
 
+
+
+// Nav links do not reload page.
+nav.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("clicked on navlink");
+});
+
 // Press any keyboard key to make the header disappear. 
 const body = document.querySelector('body');
 const header = document.querySelector('.main-navigation');
